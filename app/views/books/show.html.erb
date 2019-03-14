@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" media="all">
+	<title>詳細画面</title>
+</head>
+<body>
+	      <% if flash[:notice] %>
+	       		<a><%= flash[:notice] %></a>
+	       <% end %>
+　　　　  <a>
+			<strong>Title:</strong><%= @book.title %>
+	     </a>
+         <a>
+       	     <strong>Body:</strong><%= @book.body %>
+         </a>
+      <a><%= link_to "Edit", edit_book_path(@book), class: "edit_#{@book}"  %></a>
+      |
+      <a><%= link_to " Back", books_path(@book) %></a>
+</body>
+</html>
