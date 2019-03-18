@@ -10,11 +10,11 @@
   <%= form_for(@book) do |f| %>
       <div>
           <h4>Title</h4>
-          <a><%= f.text_field :title %></a>
+          <a><%= f.text_field :title, class: "book_title" %></a>
       </div>
       <div>
           <a><h4>Body</h4></a>
-          <a><%= f.text_area :body %></a>
+          <a><%= f.text_area :body, class: "book_body" %></a>
       </div>
       <div>
           <%= f.submit 'upload Book' %>
